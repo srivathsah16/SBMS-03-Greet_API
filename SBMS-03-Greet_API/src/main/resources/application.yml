@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: GREET-API
+  boot:
+    admin:
+      client:
+        url: 'http://localhost:2222/'
+  cloud:
+    compatibility-verifier:
+      enabled: false
+server:
+  port: 8081
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
